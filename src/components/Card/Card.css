@@ -1,0 +1,35 @@
+.card{
+    width: 130px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-front{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+}
+ 
+.card.flipped .card-front {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+.card.flipped .card-back {
+    opacity: 1;
+}
